@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files from the "public" directory
-app.use(express.static(path.join("/public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Retrieve the MongoDB URI from the environment variable
 const MONGODB_URI = process.env.MONGODB_URI;
